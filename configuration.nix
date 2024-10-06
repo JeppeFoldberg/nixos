@@ -13,6 +13,18 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # limit the number of configurations to keep:
+  boot.loader.systemd-boot.configurationLimit = 10;
+  
+  # perform garbage collection biweekly to maintain low disk usage
+  nix.gc = {
+  	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 2w";
+  };
+
+  # and optimize storage 
+  nix.settings.auto-optimise-store = true; 
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
