@@ -61,6 +61,9 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # attempt at using hyprland instead
+  programs.hyprland.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "dk";
@@ -116,6 +119,9 @@
 	neovim
    	git
 	pkgs.kitty
+	pkgs.wofi
+	pkgs.waybar
+	pkgs.font-awesome
 	pkgs.zellij
 	pkgs.xclip
   #  wget
