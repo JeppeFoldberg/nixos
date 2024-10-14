@@ -111,21 +111,6 @@
     };
   };
 
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-  # programs.alacritty = {
-  #   enable = true;
-  #   # custom settings
-  #   settings = {
-  #     env.TERM = "xterm-256color";
-  #     font = {
-  #       size = 12;
-  #       draw_bold_text_with_bright_colors = true;
-  #     };
-  #     scrolling.multiplier = 5;
-  #     selection.save_to_clipboard = true;
-  #   };
-  # };
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -140,6 +125,16 @@
       urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
+  };
+
+
+  # services! 
+  # gammastep is a automatic blue light filter
+  services.gammastep = {
+	  enable = true;
+	  provider = "manual";
+	  latitude = 55.7;
+	  longitude = 12.6;
   };
 
   # This value determines the home Manager release that your
