@@ -124,18 +124,24 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   environment.systemPackages = with pkgs; [
    	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 	neovim
    	git
-	pkgs.kitty
-	pkgs.hyprpaper
-	pkgs.wofi
-	pkgs.waybar
-	pkgs.font-awesome
-	pkgs.zellij
-	pkgs.xclip
+	kitty
+	hyprpaper
+	wofi
+	waybar
+	cliphist
+	wl-clipboard
+	# pkgs.font-awesome
+	zellij
   #  wget
+  ];
+
+  fonts.packages = with pkgs; [
+        pkgs.nerd-fonts.jetbrains-mono
   ];
 
   # set default editor to vim! 
