@@ -135,8 +135,8 @@
 	waybar
 	cliphist
 	wl-clipboard
-	# pkgs.font-awesome
 	zellij
+	mpv
   #  wget
   ];
 
