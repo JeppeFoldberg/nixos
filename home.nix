@@ -29,7 +29,6 @@
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
-
     neofetch
     # archives
     zip
@@ -129,6 +128,26 @@
     };
   };
 
+  programs.vim = {
+	enable = true;
+	settings = {
+		tabstop = 4;
+		shiftwidth = 4;
+		expandtab = true;
+	};
+  };
+
+  # programs.neovim = {
+  #   enable = true;
+# 	plugins = [
+		
+# 	]
+	# aliases to swap out vim everywhere - enable when ready 
+	# viAlias = true;
+	# vimAlias = true;
+	# vimdiffAlias = true;
+
+ #  };
 
   # services! 
   # gammastep is a automatic blue light filter
