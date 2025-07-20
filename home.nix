@@ -187,7 +187,17 @@
 
   programs.wofi = {
     enable = true;
+    settings = {
+      height = 350;
+      width = 500;
+    };
     style = ( builtins.readFile ./styles/wofi-macchiato.css );
+  };
+
+  programs.waybar = {
+    enable = true;
+    style = ( builtins.readFile ./styles/waybar-macchiato.css );
+    settings = ( builtins.readFile ./dotfiles/waybar_config ) 
   };
 
   # services! 

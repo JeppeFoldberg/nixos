@@ -132,12 +132,16 @@
 	kitty
 	hyprpaper
     # wofi
-	waybar
 	cliphist
 	wl-clipboard
 	zellij
 	mpv
   ];
+
+  # programs.waybar = {
+  #   enable = true;
+  #   style = ( builtins.readFile ./styles/waybar-macchiato.css );
+  # };
 
   fonts.packages = with pkgs; [
         pkgs.nerd-fonts.jetbrains-mono
