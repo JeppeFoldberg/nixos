@@ -187,9 +187,7 @@
 
   programs.wofi = {
     enable = true;
-    settings = {
-      style = ( builtins.readFile ./styles/wofi-macchiato.css );
-    };
+    style = ( builtins.readFile ./styles/wofi-macchiato.css );
   };
 
   # services! 
