@@ -197,7 +197,7 @@
   programs.waybar = {
     enable = true;
     style = ( builtins.readFile ./styles/waybar-macchiato.css );
-    settings = ( builtins.readFile ./dotfiles/waybar_config ) 
+    settings = ( builtins.fromJSON ( builtins.readFile ./dotfiles/waybar_config ));
   };
 
   # services! 
