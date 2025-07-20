@@ -1,10 +1,11 @@
 {
-    "layer": "top", "position": "top",
+    "mainBar": {
+        "layer": "top", 
+        "position": "top",
         "modules-left": ["disk", "memory", "cpu", "temperature"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["backlight", "bluetooth", "pulseaudio", "network",  "battery", "clock"],
         "reload_style_on_change":true,
-
 
         "hyprland/workspaces": {
             "format": "{icon}",
@@ -67,7 +68,7 @@
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
             "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
             "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-            "on-click": "rofi-bluetooth",
+            "on-click": "rofi-bluetooth"
         }, 
 
         "network": {
@@ -98,8 +99,9 @@
             "󰂀",
             "󰂂",
             "󰁹"
-            ],
+            ]
         },
+
         "backlight": {
             "device": "intel_backlight",
             "format": "<span font='12'>{icon}</span>",
@@ -113,7 +115,7 @@
             "",
             "",
             "",
-            "",
+            ""
             ],
             "on-scroll-down": "light -A 10",
             "on-scroll-up": "light -U 10",
@@ -140,7 +142,7 @@
             "format": " {usage}%",
             "min-length": 6,
             "max-length": 6,
-            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
         },
 
         "memory": {
@@ -160,7 +162,7 @@
             "format-critical": " {temperatureC}°C",
             "interval": 1,
             "critical-threshold": 80,
-            "on-click": "foot btop",
+            "on-click": "foot btop"
         },
 
         "pulseaudio": {
@@ -208,4 +210,5 @@
             "exec": "~/.config/waybar/scripts/powerdraw.sh",
             "return-type": "json"
         }
+    }
 }
