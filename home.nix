@@ -129,33 +129,76 @@
   };
 
   programs.vim = {
-	enable = true;
-	settings = {
-		tabstop = 4;
-		shiftwidth = 4;
-		expandtab = true;
-	};
+    enable = true;
+    settings = {
+      tabstop = 4;
+      shiftwidth = 4;
+      expandtab = true;
+    };
   };
 
-  # programs.neovim = {
-  #   enable = true;
-# 	plugins = [
-		
-# 	]
-	# aliases to swap out vim everywhere - enable when ready 
-	# viAlias = true;
-	# vimAlias = true;
-	# vimdiffAlias = true;
+  # programs.neovim = 
+  # let 
+  #   toLua = str: "lua << EOF \n${str}\nEOF\n";
+  # in
+  # {
+    # enable = true;
+    # plugins = with pkgs.vimPlugins; [
+      # {
+        # plugin = nvim-lspconfig # damn fine cup of lsps
+        # config = ""
+      # }
+      # {
+        # plugin = comment-nvim # these suckers 
+        # config = tolua "require(\"Comment\").setup()";
+      # }
+      # {
+        # plugin = lazydev-nvim # reload config and ui
+        # config = ""
+      # }
+      # {
+        # plugin = telescope-nvim # quickly find files 
+        # config = ""
+   #    }
+      # {
+#         plugin = nvim-cmp # tab-complete plugin
+        # config = ""
+      # }
+      # {
+        # plugin = lualine-nvim
+        # config = ""
+      # }
 
+      # (nvim-treesitter.withplugins (p: [
+        # p.tree-sitter-nix
+        # p.tree-sitter-bash
+        # p.tree-sitter-lua
+        # p.tree-sitter-rust
+      # ]));
+
+      # telescope-fzf-native-nvim
+      # vim-nix
+   #  ];
+  #   aliases to swap out vim everywhere - enable when ready 
+    # viAlias = true;
+    # vimAlias = true;
+    # vimdiffAlias = true;
  #  };
+
+  programs.wofi = {
+    enable = true;
+    settings = {
+      style = ( builtins.readFile ./styles/wofi-macchiato.css );
+    };
+  };
 
   # services! 
   # gammastep is a automatic blue light filter
   services.gammastep = {
-	  enable = true;
-	  provider = "manual";
-	  latitude = 55.7;
-	  longitude = 12.6;
+    enable = true;
+    provider = "manual";
+    latitude = 55.7;
+    longitude = 12.6;
   };
 
   # This value determines the home Manager release that your
